@@ -9,6 +9,7 @@ import './App.css';
 import Welcome from './components/Welcome';
 import Note from './components/Note';
 import AllNotes from './components/Notes';
+import OneNote from "./components/oneNote"
 function App() {
   const navigate = useNavigate();
   const [auth, setAuth] = useState({});
@@ -68,6 +69,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
           <Route path='/notes/create/:id' element={<Note />} />
+          {/* <Route path='/notes/:id' element={<OneNote />} /> */}
           <Route path='/notes' element={<AllNotes />} />
           <Route path='/' element={<Welcome />} />
         </Routes>

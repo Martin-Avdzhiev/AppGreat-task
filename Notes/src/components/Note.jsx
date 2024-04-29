@@ -15,6 +15,7 @@ export default function Note(){
         } catch (error) {
             console.log(error.message)
         }
+
     }
     const { values, onChange, onSubmit } = useForm(onSubmitHandler, {
         title: "",

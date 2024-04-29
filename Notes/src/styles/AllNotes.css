@@ -4,3 +4,7 @@
     justify-content: center;
     margin-top: 20px;
 }
+.notes>*{
+    margin-right: 2em;
+    
+}

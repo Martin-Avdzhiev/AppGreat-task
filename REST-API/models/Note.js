@@ -2,6 +2,7 @@ const { Schema, model, ObjectId } = require('mongoose');
 const noteSchema = new Schema({
     title: String,
     content: String,
+    owner:String,
     author: {
         type: Schema.ObjectId,
         ref: 'User'

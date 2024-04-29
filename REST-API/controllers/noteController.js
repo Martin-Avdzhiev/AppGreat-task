@@ -17,6 +17,7 @@ noteRouter.post('/create/:id',async (req, res) => {
     try {
         const userId = req.params.id;
         const noteData = req.body;
+        noteData.owner = userId;
         const note = await Note.create(noteData);
         const user = await User.findById(userId);
         user.notes.push(note._id);
@@ -44,7 +45,9 @@ noteRouter.delete('/delete/:id',async (req, res) => {
     try {
         const id = req.params.id;
         const note = await Note.findById(id);
-        const owner = await Note.findOnbyId(note.author);
+        const ownerId = note.owner;
+        const owner = await User.findById(ownerId);
+        console.log(owner)
         owner.notes = owner.notes.filter(noteId => noteId !== id);
         const updateUser = await User.findByIdAndUpdate(owner._id,owner);
         const deletedNote = await Note.findByIdAndDelete(id);

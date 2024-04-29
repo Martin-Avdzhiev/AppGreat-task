@@ -104,9 +104,9 @@ async function updateNote() {
     }
 }
 async function deleteNote(id) {
-    console.log(id)
+    console.log(`${API}/notes/${id}`)
     try {
-        const response = await fetch(`${API}/notes/${id}`, {
+        const response = await fetch(`${API}/notes/delete/${id}`, {
             method: 'DELETE',
         });
         const result = await response.json();
