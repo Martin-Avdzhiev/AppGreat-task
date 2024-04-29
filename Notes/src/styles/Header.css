@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    width: 100vw;
+    height: 4em;
+}
+.header header{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header>header>a{
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    margin-left: 3em;
+}
+.header nav {
+    display: flex;
+    width: 10vw;
+    justify-content: space-between;
+    margin-right: 3em;
+    text-decoration: none;
+}
