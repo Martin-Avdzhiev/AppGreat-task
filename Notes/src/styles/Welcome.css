@@ -1,0 +1,27 @@
+.welcome-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+}
+.welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10vh;
+    margin-top: 3em;
+    align-items: center;
+    width: 55vw;
+}
+.welcome div{
+    display: flex;
+    gap: 3em;
+}
+.welcome h3{
+    font-size: 18px;
+}
+.welcome a{
+    color: black;
+    text-decoration: none;
+}

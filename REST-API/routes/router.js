@@ -1,5 +1,5 @@
 const userController = require("../controllers/userController.js");
-//const noteController = require("../controllers/noteController.js");
+const noteController = require("../controllers/noteController.js");
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
@@ -7,6 +7,6 @@ router.get('/', (req, res) => {
 });
 
 router.use('/', userController);
-//router.use('/notes', noteController);
+router.use('/notes/', noteController);
 
 module.exports = router;

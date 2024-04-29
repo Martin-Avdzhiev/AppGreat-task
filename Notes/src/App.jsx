@@ -7,6 +7,8 @@ import AuthContext from './contexts/authContext';
 import { loginUser, registerUser } from './utils/fetchData';
 import './App.css';
 import Welcome from './components/Welcome';
+import Note from './components/Note';
+import AllNotes from './components/Notes';
 function App() {
   const navigate = useNavigate();
   const [auth, setAuth] = useState({});
@@ -40,7 +42,7 @@ function App() {
     else {
       setAuth(result);
       setRegisterError('');
-      navigate('/login')
+      navigate('/notes')
     }
   }
   const logoutSubmitHandler = () => {
@@ -65,6 +67,8 @@ function App() {
         <Routes>
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/notes/create/:id' element={<Note />} />
+          <Route path='/notes' element={<AllNotes />} />
           <Route path='/' element={<Welcome />} />
         </Routes>
       </AuthContext.Provider>
