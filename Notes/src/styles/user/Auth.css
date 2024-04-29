@@ -1,0 +1,28 @@
+.auth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28vh;
+    background-color: #f5f5f5;
+    width: 20vw;
+    margin: 2em auto 0 auto;
+    padding: 1em;
+    border-radius: 2em;
+}
+.auth form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+}
+.auth form>*{
+    margin-bottom: 0.5em;
+    border-radius: 1em;
+    padding-inline: 0.5em;
+}
+.auth button {
+    margin-top: 0.5em;
+    cursor: pointer;
+}

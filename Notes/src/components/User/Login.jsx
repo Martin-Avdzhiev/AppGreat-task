@@ -2,16 +2,15 @@ import "../../styles/user/Auth.css";
 import useForm from "../../hooks/useForm";
 import AuthContext from "../../contexts/authContext";
 import { useContext } from 'react';
-
-export default function Register() {
+export default function Login() {
     const {
-        registerSubmitHandler,
+        loginSubmitHandler,
     } = useContext(AuthContext)
-    const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
+    const { values, onChange, onSubmit } = useForm(loginSubmitHandler, {
         username: '',
         password: '',
-        repeatPassword: ''
     })
+
     return (
         <div className="auth">
             <form action="POST" onSubmit={onSubmit}>
@@ -19,8 +18,6 @@ export default function Register() {
                 <input type="text" id="username" name="username" onChange={onChange} value={values.username} required />
                 <label htmlFor="password">Password</label>
                 <input type="password" id="password" name="password" onChange={onChange} value={values.password} required />
-                <label htmlFor="repeatPassword">Repeat Password</label>
-                <input type="password" id="repeatPassword" name="repeatPassword" onChange={onChange} value={values.repeatPassword} required />
                 <button type="submit">Submit</button>
             </form>
         </div>

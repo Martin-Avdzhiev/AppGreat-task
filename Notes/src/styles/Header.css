@@ -13,9 +13,11 @@
     align-items: center;
     justify-content: space-between;
 }
-.header>header>a{
+.header>header>nav>a,.header>header>a{
     text-decoration: none;
     color: #000;
+}
+.header>header>a{
     display: inline-block;
     margin-left: 3em;
 }
